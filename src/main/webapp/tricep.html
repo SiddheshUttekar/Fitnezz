@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com/2.2.15/tailwind.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <title>Fitnezz Triceps</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <style>
+        #load {
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            background: white url(./images/Spin-Preloader-1.gif) no-repeat center;
+            z-index: 9999999;
+        }
+        .exercise {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .exercise h3 {
+            background-color: #34d399;
+            color: white;
+            padding: 10px;
+            border-radius: 50px;
+            width: fit-content;
+            margin-right: auto;
+            margin-left: 0;
+        }
+        .video-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .video-container iframe {
+            width: 45%;
+            height: 300px;
+            border-radius: 10px;
+        }
+        /* Navbar styles */
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            color: #8a2be2;
+        }
+    </style>
+</head>
+<body onload="myFunction()" class="bg-gray-100">
+    <div id="load"></div>
+
+    <!-- Navbar section -->
+    <nav class="navbar text-center">
+        <a class="logo" href="#">Fitne<span class="text-purple-800">zz</span></a>
+        <a href="./index.html">Home</a>
+        <a href="./index.html">About</a>
+        <a href="./index.html">Contact</a>
+        <a href="./index.html">News</a>
+        <button class="bg-purple-800 text-white px-4 py-2 rounded-md hover:bg-purple-600 transition duration-300">Become a member</button>
+    </nav>
+
+    <!-- Content section -->
+    <div class="container mx-auto mt-10">
+        <h2 class="text-center font-bold text-3xl font-serif text-black bg-cyan-400 w-72 h rounded-lg p-3 mx-auto">Triceps</h2>
+
+        <!-- Exercise 1: Barbell Overhead Press -->
+        <div class="exercise">
+            <h3 class="text-2xl font-semibold">Barbell Overhead Press</h3>
+            <div class="video-container">
+                <iframe src="./videos/overhead1.mp4" frameborder="0"></iframe>
+                <iframe src="./videos/overhead2.mp4" frameborder="0"></iframe>
+            </div>
+            <ul class="mt-4 text-lg">
+                <li>1. Take a roughly shoulder-width grip. There should be a straight line from your elbow to fist (vertical forearms).</li>
+                <li>2. Pull your chin back and press the weight toward the ceiling by extending at the elbow joint and flexing at the shoulder joint.</li>
+                <li>3. Press until your elbows are extended and push your head forward slightly.</li>
+                <li>4. Return to the start position with control. Pulling your chin back to allow the bar to pass your face safely.</li>
+            </ul>
+        </div>
+
+        <!-- Exercise 2: Dips -->
+        <div class="exercise">
+            <h3 class="text-2xl font-semibold">Dips</h3>
+            <div class="video-container">
+                <iframe src="./videos/dips1.mp4" frameborder="0"></iframe>
+                <iframe src="./videos/dips2.mp4" frameborder="0"></iframe>
+            </div>
+            <ul class="mt-4 text-lg">
+                <li>1. Hold your body with arms locked above the equipment.</li>
+                <li>2. Lower your body slowly while leaning forward, flare out your elbows.</li>
+                <li>3. Raise your body above the bars until your arms are locked.</li>
+            </ul>
+        </div>
+
+        <!-- Exercise 3: Barbell Bench Press -->
+        <div class="exercise">
+            <h3 class="text-2xl font-semibold">Barbell Bench Press</h3>
+            <div class="video-container">
+                <iframe src="./videos/benchpress1.mp4" frameborder="0"></iframe>
+                <iframe src="./videos/benchpress2.mp4" frameborder="0"></iframe>
+            </div>
+            <ul class="mt-4 text-lg">
+                <li>1. Lay flat on the bench with your feet on the ground. With straight arms unrack the bar.</li>
+                <li>2. Lower the bar to your mid chest.</li>
+                <li>3. Raise the bar until you've locked your elbows.</li>
+            </ul>
+        </div>
+
+        <!-- Exercise 4: Cable Push Downs -->
+        <div class="exercise">
+            <h3 class="text-2xl font-semibold">Cable Push Downs</h3>
+            <div class="video-container">
+                <iframe src="./videos/cable1.mp4" frameborder="0"></iframe>
+                <iframe src="./videos/cable2.mp4" frameborder="0"></iframe>
+            </div>
+            <ul class="mt-4 text-lg">
+                <li>1. Grip the pulley bar with palms facing down at shoulder width.</li>
+                <li>2. Stand straight with a small forward incline. Keep your upper arms close to your body, and slowly bring the pulley bar down until your arms are fully extended.</li>
+                <li>3. Pause when you are at the contracted position of the motion, then slowly raise the pulley bar back to the starting point.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var preloader = document.getElementById('load');
+        function myFunction() {
+            preloader.style.display = 'none';
+        }
+    </script>
+
+    <!-- Bootstrap JS and jQuery (Make sure to include them at the end of the body) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+

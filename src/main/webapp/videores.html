@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Fitness Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+
+    .featureclass {
+      margin: 50px auto;
+      text-align: center;
+      max-width: 800px; /* Set a maximum width for better responsiveness */
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      max-width: 250px; /* Set a maximum width for each box */
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .img {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .img img {
+      width: 100%;
+      height: 100%; /* Ensure the image takes the full height of the container */
+      object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    }
+
+    .content {
+      padding: 15px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .title {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+  <a href="#">News</a>
+</nav>
+
+<section class="featureclass">
+  <h1 data-aos="fade-right" data-aos-duration="800">FEATURED CLASSES</h1>
+
+  <div class="grid">
+    <!-- Featured Class 1 -->
+    <div data-aos="zoom-in-up" data-aos-duration="800" class="card">     
+      <div class="img">
+        <img src="./images/chest_day.jpg" alt="" />
+      </div> 
+      <div class="content">
+        <a href="./chestworkout.html">
+          <h2 class="title">Chest Workout</h2>
+        </a>
+      </div>
+    </div>
+
+    <!-- Featured Class 2 -->
+    <div data-aos="zoom-in-up" data-aos-duration="800" class="card">     
+      <div class="img">
+        <img src="./images/back_day.jpg" alt="" />
+      </div> 
+      <div class="content">
+        <a href="./back.html">
+          <h2 class="title">Back Workout</h2>
+        </a>
+      </div>
+    </div>
+
+    <!-- Featured Class 3 -->
+    <div data-aos="zoom-in-up" data-aos-duration="800" class="card">     
+      <div class="img">
+        <img src="./images/leg_day.jpeg" alt="" />
+      </div> 
+      <div class="content">
+        <a href="./legworkout.html">
+          <h2 class="title">Leg Workout</h2>
+        </a>
+      </div>
+    </div>
+
+    <!-- Repeat similar blocks for other featured classes -->
+    <!-- Featured Class 4 -->
+    <div data-aos="zoom-in-up" data-aos-duration="800" class="card">     
+      <div class="img">
+        <img src="./images/arm_day.jpg" alt="" />
+      </div> 
+      <div class="content">
+        <a href="./armworkout.html">
+          <h2 class="title">Arm Workout</h2>
+        </a>
+      </div>
+    </div>
+
+    <!-- Featured Class 5 
+    <div data-aos="zoom-in-up" data-aos-duration="800" class="card">     
+      <div class="img">
+        <img src="./images/tricep_day.jpg" alt="" />
+      </div> 
+      <div class="content">
+        <a href="./tricep.html">
+          <h2 class="title">Tricep Workout</h2>
+        </a>
+      </div>
+    </div>  -->
+
+    <!-- Featured Class 6 -->
+    <div data-aos="zoom-in-up" data-aos-duration="800" class="card">     
+      <div class="img">
+        <img src="./images/shoulder_day.jpg" alt="" />
+      </div> 
+      <div class="content">
+        <a href="./shoulder.html">
+          <h2 class="title">Shoulder Workout</h2>
+        </a>
+      </div>
+    </div>
+
+    <!-- Featured Class 7 -->
+    <div data-aos="zoom-in-up" data-aos-duration="800" class="card">     
+      <div class="img">
+        <img src="./images/bicep_day.jpg" alt="" />
+      </div> 
+      <div class="content">
+        <a href="./bicep.html">
+          <h2 class="title">Bicep Workout</h2>
+        </a>
+      </div>
+    </div>
+
+    <!-- Featured Class 8 -->
+    <div data-aos="zoom-in-up" data-aos-duration="800" class="card">     
+      <div class="img">
+        <img src="./images/cardio_day.jpg" alt="" />
+      </div> 
+      <div class="content">
+        <a href="./cardio.html">
+          <h2 class="title">Cardio Workout</h2>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add other sections or content as needed -->
+
+</body>
+</html>

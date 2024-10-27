@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>How to Design Login & Registration Form Transition</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+    <div class="cont">
+        <span class="logo" style="color: #74b9ff;">FIT</span><span class="logo1" style="font-style: italic;">nezz</span>
+        <div class="form sign-in">
+            <h2>Sign In</h2>
+            <label>
+                <span>Email Address</span>
+                <input type="email" name="email">
+            </label>
+            <label>
+                <span>Password</span>
+                <input type="password" name="password">
+            </label>
+            <label>
+                <span>Role</span>
+                <select id="loginRole">
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </label>
+            <button class="submit" type="button" onclick="login()">Sign In</button>
+            <p class="forgot-pass">Forgot Password ?</p>
+
+            <div class="social-media">
+                <ul>
+                    <li><img src="images/facebook.png"></li>
+                    <li><img src="images/twitter.png"></li>
+                    <li><img src="images/linkedin.png"></li>
+                    <li><img src="images/instagram.png"></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img-text m-up">
+                    <h2>New here?</h2>
+                    <p>Sign up and discover great amount of new opportunities!</p>
+                </div>
+                <div class="img-text m-in">
+                    <h2>One of us?</h2>
+                    <p>If you already have an account, just sign in. We've missed you!</p>
+                </div>
+                <div class="img-btn">
+                    <span class="m-up">Sign Up</span>
+                    <span class="m-in">Sign In</span>
+                </div>
+            </div>
+            <div class="form sign-up">
+                <h2>Sign Up</h2>
+                <label>
+                    <span>Name</span>
+                    <input type="text" id="signupName">
+                </label>
+                <label>
+                    <span>Email</span>
+                    <input type="email" id="signupEmail">
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="password" id="signupPassword">
+                </label>
+                <label>
+                    <span>Confirm Password</span>
+                    <input type="password" id="confirmPassword">
+                </label>
+                <label>
+                    <span>Role</span>
+                    <select id="signupRole">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </label>
+                <button type="button" class="submit" onclick="signup()">Sign Up Now</button>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="script.js"></script>
+
+    <script>
+        function signup() {
+            // Get form data
+            var name = document.getElementById('signupName').value;
+            var email = document.getElementById('signupEmail').value;
+            var password = document.getElementById('signupPassword').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+            var role = document.getElementById('signupRole').value;
+
+            // Validate data (you might want to add more validation here)
+
+            // Send data to the server using AJAX or fetch API
+            // Example using fetch API
+            fetch('signup-endpoint', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    password: password,
+                    role: role,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle response from the server
+                console.log('Success:', data);
+                // Redirect or show a success message
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                // Handle errors, show error messages, etc.
+            });
+        }
+
+        function login() {
+            // Get form data
+            var email = document.getElementsByName('email')[0].value;
+            var password = document.getElementsByName('password')[0].value;
+            var role = document.getElementById('loginRole').value;
+
+            // Validate data (you might want to add more validation here)
+
+            // Send data to the server using AJAX or fetch API
+            // Example using fetch API
+            fetch('login-endpoint', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password,
+                    role: role,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle response from the server
+                console.log('Success:', data);
+                // Redirect or show a success message
+                if (role === 'user') {
+                    // Redirect user to user page
+                    window.location.href = 'user-page.html';
+                } else if (role === 'admin') {
+                    // Redirect admin to admin page
+                    window.location.href = 'admin-page.html';
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                // Handle errors, show error messages, etc.
+            });
+        }
+    </script>
+</body>
+</html>
